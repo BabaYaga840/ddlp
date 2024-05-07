@@ -16,10 +16,10 @@ ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 class Obj3D(Dataset):
     def __init__(self, root, mode, ep_len=100, sample_length=20, res=64):
-        # path = os.path.join(root, mode)
+        #path = os.path.join(root, mode)
         assert mode in ['train', 'val', 'valid', 'test']
-        if mode == 'valid':
-            mode = 'val'
+        mode='val'
+        print(mode)
         self.root = os.path.join(root, mode)
         self.res = res
 
